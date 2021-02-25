@@ -1,11 +1,11 @@
 var path = require("path");
 
 module.exports = function(app) {
-  // Called when "Countinue Workout" or "new Workout" is clicked in index.html
+  // call the exercise.html page 
   app.get("/exercise", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/exercise.html"));
   });
-  // Not quite sure what this is used for yet ....
+  // calls the dashboard 
   app.get("/stats", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
   });
