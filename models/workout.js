@@ -48,10 +48,10 @@ const WorkoutSchema = new Schema(
 } 
 );
 
-WorkoutSchema.virtual("duration").get(function() {
+WorkoutSchema.virtual("totalDuration").get(function() {
     // format array of exercises to extract the sum of their durations
     return this.exercises.reduce((total, exercise,) => {
-      return total + day + exercise.duration;
+      return total + exercise.duration;
     }, 0);
   });
 
